@@ -6,7 +6,7 @@ import wikipedia
 from loader import dp
 
 
-@dp.message_handler(commands=['wiki'])
+@dp.message_handler(text = "Wikipedia")
 async def tar_holat(message: types.Message, state:FSMContext):
     await message.answer('siz wiki xolatidasiz, '
                          'wiki qilinishi kerak bolgan malumotni yuboring')

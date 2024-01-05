@@ -8,7 +8,7 @@ tarjima = Translator()
 
 from loader import dp
 
-@dp.message_handler(commands=['translate'])
+@dp.message_handler(text="Tarjima")
 async def tar_holat(message: types.Message, state:FSMContext):
     await message.answer('siz tarjimon xolatidasiz, '
                          'tarjima qilinishi kerak bolgan malumotni yuboring')
