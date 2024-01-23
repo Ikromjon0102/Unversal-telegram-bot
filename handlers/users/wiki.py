@@ -19,7 +19,8 @@ async def tar_holat(message: types.Message, state:FSMContext):
 @dp.callback_query_handler(text="uzwiki", state = "Wiki")
 async def wiki(query: types.CallbackQuery, state: FSMContext):
     await query.message.answer("Message, Siz O'zbek tilini tanladiz, ")
-    await query.answer("query, Siz O'zbek tilini tanladiz, ", show_alert=True)
+    await query.answer("query, Siz O'zbek tilini tanladiz, ")
+    await query.answer(cache_time=60)
     await query.message.delete()
 
     await state.set_state("uzwikipedia")

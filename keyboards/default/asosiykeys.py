@@ -4,6 +4,10 @@ from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 main_keys = ReplyKeyboardMarkup(
     keyboard = [
         [
+            KeyboardButton(text="Kitoblar")
+        ],
+
+        [
             KeyboardButton(text="Tarjima"),
             KeyboardButton(text="Wikipedia"),
         ],
@@ -11,7 +15,7 @@ main_keys = ReplyKeyboardMarkup(
             KeyboardButton(text="🚪 exit"),
         ],
         [
-            KeyboardButton(text="Bog'lanish", request_contact=True),
+            KeyboardButton(text="Bog'lanish"),
             KeyboardButton(text="joylashuvni yuborish", request_location=True),
         ]
 

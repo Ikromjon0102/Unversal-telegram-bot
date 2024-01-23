@@ -2,6 +2,7 @@ from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
 from aiogram.dispatcher import FSMContext
 from keyboards.default.asosiykeys import main_keys
+from keyboards.inline.wikipedia_keys import contact_key
 
 from loader import dp
 file_path = "data/myusers"
@@ -33,3 +34,7 @@ async def xolat_exit(message: types.Message, state:FSMContext):
     await state.finish()
 
 
+@dp.message_handler(text="Bog'lanish")
+async def contact_admin(msg: types.Message):
+    xabar = f"Adminlar bilan bog'lanish"
+    await  msg.answer(xabar, reply_markup=contact_key)
