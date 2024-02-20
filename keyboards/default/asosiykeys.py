@@ -16,7 +16,7 @@ main_keys = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text="Bog'lanish"),
-            KeyboardButton(text="joylashuvni yuborish", request_location=True),
+            KeyboardButton(text="joylashuvni yuborish"),
         ]
 
     ],
