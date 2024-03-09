@@ -7,7 +7,7 @@ from keyboards.default.asosiykeys import main_keys
 from keyboards.inline.wikipedia_keys import contact_key
 
 from loader import dp
-from utils.db_api.used_db import add_user, get_user, all_users_count, all_users_list
+# from utils.db_api.used_db import add_user, get_user, all_users_count, all_users_list
 
 file_path = "data/myusers"
 
@@ -17,8 +17,8 @@ async def bot_start(message: types.Message):
     username = message.from_user.username
     user_first_name = message.from_user.first_name
     user_last_name = message.from_user.last_name
-    if get_user(user_id) == None:
-        add_user(user_id,username,user_first_name,user_last_name)
+    # if get_user(user_id) == None:
+    #     add_user(user_id,username,user_first_name,user_last_name)
 
     # with open(file_path, "r+") as user:
     #     all_user = user.readlines()
@@ -31,7 +31,7 @@ async def bot_start(message: types.Message):
 
 @dp.message_handler(commands="allusers")
 async def all_users(msg:types.Message):
-    all_users = all_users_count()
+    # all_users = all_users_count()
 
     # with open(file_path, "r") as user:
     #     all_user = user.readlines()
@@ -40,12 +40,13 @@ async def all_users(msg:types.Message):
 
 @dp.message_handler(commands="all")
 async def all_users_list2(msg:types.Message):
-    all_users = all_users_list()
-
+    # all_users = all_users_list()
+    #
     # with open(file_path, "r") as user:
     #     all_user = user.readlines()
     #     print(all_user)
     # await msg.answer(f"sizning jami foydalnuvchilaringiz soni {all_users} ta")
+    await msg.answer(f"sizning jami foydalnuvchilaringiz soni ta")
 
 
 @dp.message_handler(text='🚪 exit', state = ['Tarjima','Wiki'])
